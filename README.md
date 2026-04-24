@@ -54,6 +54,10 @@ pip install uvicorn fastapi sqlalchemy
 uvicorn main:app --reload
 ```
 <br /> <br />
+### Backend File Structure
+<img width="302" height="230" alt="image" src="https://github.com/user-attachments/assets/b7dca72c-471a-44df-bf5f-81ab6646e6fd" />
+
+<br /> <br />
 ### 2. Frontend Setup (React)
    Within the Frontend folder, run the following command in a new terminal to install the libraries and dependencies (make sure node.js is installed on your system before proceeding with this step):
   
@@ -82,7 +86,17 @@ cd my-inventory-app
 #This command allows the server to go live
 npm run dev
 ```
-  
+<br /> <br />
+<img width="285" height="476" alt="image" src="https://github.com/user-attachments/assets/8ec1a324-f7f8-4abb-8f99-e6d1d0ff23e9" />
+
+### The Frontend folder must be structured in the exact way presented in the above image. A "components" directory must be created within the "src" folder that will include Login.jsx, Products.jsx and Register.jsx. The index.css folder will be deleted as App.css will replace it containing all the styling necessary
+<br /> <br />
+<img width="1367" height="566" alt="image" src="https://github.com/user-attachments/assets/771a2df0-e1c0-42e1-9184-450fbf1eecb4" />
+### Following the deletion of the index.css folder, make sure the import location is also redirected to 
+```bash 
+import './App.css'
+```
+
 
 ### Key Note: Make sure you replace "db_url" within the database.py file to connect to your preferred SQL Database
 
