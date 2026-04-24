@@ -94,7 +94,7 @@ npm run dev
 
 <img width="765" height="247" alt="image" src="https://github.com/user-attachments/assets/06d940f2-33d4-4979-b793-4569a2d068b3" />
 
-### Local Host link displayed after running the backend in terminal
+<br /> <br />
 
 <img width="966" height="194" alt="image" src="https://github.com/user-attachments/assets/7c529e15-e76e-4f1b-b5c0-5f4fec3a847b" />
 
