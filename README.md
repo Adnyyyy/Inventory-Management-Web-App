@@ -30,11 +30,8 @@
 
 
 ### Create another folder named "Frontend" the same way.
-
-<img width="441" height="231" alt="image" src="https://github.com/user-attachments/assets/365320d9-fc27-4a9a-a465-174dbd411b37" />
-
-### Above is the final file structure for the project
-
+<br /> <br />
+<img width="444" height="283" alt="image" src="https://github.com/user-attachments/assets/16ff0103-d943-4311-ad99-a055e4ced69f" />
 
 
 <br /> <br />
@@ -54,7 +51,7 @@ pip install uvicorn fastapi sqlalchemy
 uvicorn main:app --reload
 ```
 <br /> <br />
-### Backend File Structure
+### Backend Folder Structure
 <img width="302" height="230" alt="image" src="https://github.com/user-attachments/assets/b7dca72c-471a-44df-bf5f-81ab6646e6fd" />
 
 <br /> <br />
@@ -87,6 +84,7 @@ cd my-inventory-app
 npm run dev
 ```
 <br /> <br />
+### Frontend Folder Structure
 <img width="285" height="476" alt="image" src="https://github.com/user-attachments/assets/8ec1a324-f7f8-4abb-8f99-e6d1d0ff23e9" />
 
 ### The Frontend folder must be structured in the exact way presented in the above image. A "components" directory must be created within the "src" folder that will include Login.jsx, Products.jsx and Register.jsx. The index.css folder will be deleted as App.css will replace it containing all the styling necessary
