@@ -7,11 +7,8 @@ import './App.css';
 function App() {
   const [view, setView] = useState('login');
   const [token, setToken] = useState(null);
-
-  // Theme State - checks localStorage so it persists on refresh
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
-  // Effect to apply the theme to the HTML tag whenever it changes
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -43,8 +40,7 @@ function App() {
           onLogout={() => {setToken(null); setView('login');}}
         />
       )}
-
-      {/* Theme Toggle Button - Fixed to Bottom Right via CSS */}
+      
       <button className="theme-toggle-btn" onClick={toggleTheme}>
         {theme === 'light' ? '🌙' : '☀️'}
       </button>
