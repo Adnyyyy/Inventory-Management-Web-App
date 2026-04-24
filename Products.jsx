@@ -5,11 +5,9 @@ function Products({ token, onLogout }) {
   const [showModal, setShowModal] = useState(false);
   const [editingId, setEditingId] = useState(null);
 
-  // Selection Logic States
   const [isDeleteMode, setIsDeleteMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState([]);
 
-  // Form fields
   const [name, setName] = useState('');
   const [category, setCategory] = useState('');
   const [price, setPrice] = useState('');
@@ -42,7 +40,7 @@ function Products({ token, onLogout }) {
   };
 
   const handleEditClick = (product, e) => {
-    e.stopPropagation(); // Prevents selecting the card for delete
+    e.stopPropagation();
     setEditingId(product.id);
     setName(product.name);
     setCategory(product.category);
