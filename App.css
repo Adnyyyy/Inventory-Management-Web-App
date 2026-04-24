@@ -1,8 +1,8 @@
-/* --- 1. THEME VARIABLES (DYNAMIC BUTTON COLOR EDITION) --- */
+/* ---------THEME TOGGLE VARIABLES-------- */
 :root {
-  /* Light Mode */
+  /* -----------LIGHT MODE----------- */
   --bg-color: #f4f7f6;
-  --primary-accent: #ff8c00;    /* Light Mode ORANGE for buttons */
+  --primary-accent: #ff8c00; 
   --card-bg: #ffffff;
   --text-main: #333333;
   --text-muted: #666666;
@@ -13,20 +13,20 @@
 }
 
 [data-theme='dark'] {
-  /* Dark Mode */
+  /* --------DARK MODE----------- */
   --bg-color: #0f172a;
-  --primary-accent: #3b82f6;   /* Dark Mode BLUE for buttons */
+  --primary-accent: #3b82f6;  
   --card-bg: #1e293b;
   --text-main: #f8fafc;
   --text-muted: #a0a0a0;
   --border-color: #334155;
   --input-bg: #0f172a;
   --brand-ds-color: #ffffff;
-  --brand-accent: #3b82f6;     /* Title becomes Blue */
+  --brand-accent: #3b82f6;    
   --modal-overlay: rgba(0, 0, 0, 0.85);
 }
 
-/* --- 2. GLOBAL RESET & BODY --- */
+/* --------GLOBAL SETTINGS AND BODY--------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,7 +40,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* --- 3. MAIN LAYOUT --- */
+/* ---------MAIN LAYOUT-------- */
 .main-app {
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@ body {
   margin: 0 auto;
 }
 
-/* --- 4. BRAND TITLE --- */
+/* ---------BRAND TITLE STYLING--------- */
 .brand-title {
   font-size: 2.8rem;
   font-weight: 800;
@@ -77,7 +77,7 @@ body {
   color: var(--brand-accent);
 }
 
-/* --- 5. PRODUCT CARDS (STRICT IMAGE ALIGNMENT) --- */
+/* ----------PRODUCT CARDS STYLING---------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -98,7 +98,6 @@ body {
   flex-direction: column;
 }
 
-/* Header: Badge (Left) and Edit/Date (Right) */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -153,7 +152,6 @@ body {
   font-weight: 500;
 }
 
-/* Middle Content */
 .product-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -167,12 +165,11 @@ body {
   line-height: 1.4;
 }
 
-/* Footer: Price (Left) and Qty (Right) */
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* Pushes to bottom */
+  margin-top: auto;
 }
 
 .product-price {
@@ -191,7 +188,7 @@ body {
   font-weight: 600;
 }
 
-/* --- 6. MODALS & FORMS (CRAMPED & ALIGNMENT FIXES) --- */
+/* ---------MODAL STYLING---------- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -215,13 +212,12 @@ body {
   color: var(--text-main);
 }
 
-/* This resets any flex behavior that might be inherited */
 .input-group {
   margin-bottom: 20px;
   width: 100%;
   display: flex !important;
-  flex-direction: column !important; /* Forces Label on top, Input on bottom */
-  align-items: stretch !important;    /* Makes input full width */
+  flex-direction: column !important;
+  align-items: stretch !important;  
   text-align: left;
 }
 
@@ -235,20 +231,19 @@ body {
 
 .input-group input,
 .input-group textarea {
-  width: 100% !important; /* Force input to fill card width */
+  width: 100% !important;
   padding: 12px 15px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   background-color: var(--input-bg);
   color: var(--text-main);
   font-size: 1rem;
-  box-sizing: border-box; /* Ensures padding doesn't break width */
+  box-sizing: border-box;
 }
 
-/* Row logic for Price/Quantity sitting side-by-side */
 .input-row {
   display: flex !important;
-  flex-direction: row !important; /* Forces side-by-side */
+  flex-direction: row !important; 
   gap: 15px;
   width: 100%;
   margin-bottom: 20px;
@@ -266,7 +261,7 @@ body {
   margin-top: 30px;
 }
 
-/* --- 7. BUTTONS & UI ELEMENTS (DYNAMIC COLORS) --- */
+/* ---------BUTTON STYLING---------- */
 .link-text {
   width: 15%;
   padding: 5px;
@@ -310,12 +305,12 @@ body {
 }
 
 .cancel-btn, .confirm-add-btn{
-  padding: 12px 25px; /* Extra breathing room */
+  padding: 12px 25px;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   border: none;
-  min-width: 120px; /* Ensures buttons don't shrink too small */
+  min-width: 120px;
 }
 
 .cancel-btn {
@@ -323,17 +318,15 @@ body {
   color: var(--text-main);
 }
 
-/* Re-applying the orange/blue flip for the modal confirm button */
 .confirm-add-btn {
   background-color: #ff8c00;
   color: white;
 }
 
 [data-theme='dark'] .confirm-add-btn {
-  background-color: var(--primary-accent); /* Turns blue in dark mode */
+  background-color: var(--primary-accent); 
 }
 
-/* Unified Dynamic Toggle & Logout - Flips Orange to Blue */
 .theme-toggle-btn, .logout-button {
   position: fixed;
   background-color: var(--primary-accent) !important;
@@ -366,7 +359,7 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- 8. MASS DELETE POPUP BAR --- */
+/* ----------MASS DELETE POP UP BAR STYLING--------- */
 .mass-delete-bar {
   position: fixed;
   bottom: 25px;
@@ -395,9 +388,8 @@ body {
   font-size: 0.95rem;
 }
 
-/* Red Confirm Delete Button */
 .confirm-delete-btn {
-  background-color: #dc3545; /* Warning Red */
+  background-color: #dc3545;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -412,7 +404,6 @@ body {
   background-color: #c82333;
 }
 
-/* Accidental press / Cancel selection button */
 .cancel-selection-btn {
   background-color: var(--border-color);
   color: var(--text-main);
@@ -428,7 +419,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Optional: Subtle pulse for the selected items count */
 .selected-count {
   color: #ff8c00;
 }
