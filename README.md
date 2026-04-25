@@ -47,6 +47,14 @@ cd Backend
 pip install uvicorn fastapi sqlalchemy
 ```
 ```bash
+#For Authentication and Authorization
+pip install "python-jose[cryptography]" "passlib[bcrypt]" python-multipart
+
+# python-jose: Handles JWT generation, signing, and verification
+# passlib[bcrypt]: Securely hashes and verifies passwords
+# python-multipart: Required by FastAPI to parse OAuth2 login form data
+```
+```bash
 #Run the backend engine
 uvicorn main:app --reload
 ```
